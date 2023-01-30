@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  /* background: linear-gradient(to right, #0af, #00ff6c); */
+  /* background: linear-gradient(to right, #2b5876 , #4e4376); */
+  /* background-color: #8EC5FC; */
+  /* background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+  /* background-color: #8EC5FC; */
+  /* background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+  /* background-color: #7179c7; */
+  background-color: #faedcd;
+  /* background-color: hsla(200,0%,0%,.7)  ; */
+  /* background-image: linear-gradient(to left, #8bc6ec 0%, #9599e2 100%); */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calculator-grid {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calculator-grid button {
+  cursor: pointer;
+  font-size: 2rem;
+  /* border: 1px solid hsl(237, 57%, 84%); */
+  border: 1px solid hsl(52, 90%, 89%);
+  /* background-color: hsl(237, 56%, 79%); */
+  background-color: hsl(52, 94%, 94%);
+  /* background-color :hsla(200,0%,0%,.7); */
+  /* filter: brightness(90%); */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calculator-grid button:focus,
+.calculator-grid button:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1/-1;
+  background-color: rgba(0, 0, 0, 0.65);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
-.App-link {
-  color: #61dafb;
+.output .prev-op {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.output .curr-op {
+  color: rgba(255, 255, 255, 1);
+  font-size: 2.5rem;
 }
