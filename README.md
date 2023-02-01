@@ -3,8 +3,4 @@
 1. A Calculator that handles input changes, user interaction, and complex calculations.
 2. Built using re-renders, state management without any math libraries for calculations.
 
-<!-- ![This is an image](calculator.png) -->
-
-<p align="center">
-  <img src="calculator.png"  title="hover text">
-</p>
+![calculator](https://user-images.githubusercontent.com/85482570/216036361-046190a7-c1d6-4761-97d8-7ca65077f0f6.png)
